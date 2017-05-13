@@ -1,0 +1,328 @@
+* {
+	padding: 0;
+	margin: 0;
+}
+
+
+/*左侧开始*/
+
+#logo,
+#nav {
+	height: 300px;
+	background-color: #255625;
+	margin: 10px;
+	position: relative;
+}
+
+#logo #logo_title {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -100px;
+}
+
+#logo #logo_img {
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	top: 160px;
+	left: 50%;
+	margin-left: -50px;
+	border: 2px solid yellow;
+	border-radius: 50%;
+	overflow: hidden;
+	animation: move 2s infinite linear;
+}
+
+#logo #logo_img:hover {
+	animation: null;
+}
+
+@keyframes move {
+	from {
+		opacity: 0.5;
+		transform: rotate(0);
+	}
+	to {
+		opacity: 1;
+		transform: rotate(360deg);
+	}
+}
+
+#nav .row .col-md-12:first-child {
+	margin-top: 20px;
+}
+
+#nav .row .col-md-12,
+#nav .row .col-sm-4 {
+	height: 40px;
+	font: bold 20px/40px "微软雅黑";
+	cursor: pointer;
+	color: yellow;
+}
+
+.nav_row:hover {
+	animation: show 1s infinite linear;
+}
+
+@keyframes show {
+	0% {
+		transform: translateY(0px);
+		background-color: green;
+		border-radius: 0px;
+	}
+	25% {
+		transform: translateY(10px);
+		background-color: yellow;
+		border-radius: 25%;
+	}
+	75% {
+		transform: translateY(-10px);
+		background-color: green;
+		border-radius: 50%;
+	}
+	100% {
+		transform: translateY(0px);
+		background-color: yellow;
+		border-radius: 0;
+	}
+}
+
+.nav_item {
+	text-align: right;
+}
+
+.nav_ico::before {
+	display: inline-block;
+	height: 29px;
+	margin-top: 10px;
+}
+
+@media only screen and (max-width: 768px) {
+	#nav .row #indexitem {
+		margin-top: 0;
+	}
+	#nav {
+		height: 50px;
+	}
+	.nav_row {
+		padding: 0 30%;
+	}
+	.row .main {
+		margin-left: 0;
+	}
+}
+
+@media only screen and (max-width: 970px) {
+	#nav .row #indexitem {
+		margin-top: 0;
+	}
+	#nav {
+		height: 50px;
+	}
+	.row .main {
+		margin-left: 0;
+	}
+	.nav_row {
+		padding: 0 40%;
+	}
+	.row #title {
+		margin-left: 0;
+	}
+}
+
+
+/*左侧结束*/
+
+
+/*右侧开始*/
+
+#title {
+	margin: 10px 0 10px 10px;
+	height: 140px;
+	background-color: #255625;
+	position: relative;
+}
+
+#htitle {
+	position: absolute;
+	top: 0;
+	left: 50%;
+	margin-left: -200px;
+}
+
+.main {
+	margin: 10px 0 10px 10px;
+	height: 460px;
+	background-color: #E3E3E3;
+}
+
+@media screen and (max-width: 750px) {
+	#title,
+	#main {
+		margin: 10px 0 10px 0;
+	}
+	#logo,
+	#nav {
+		margin: 10px 14px 10px 14px;
+	}
+}
+
+.main #name {
+	background-color: yellow;
+}
+
+.main #message {
+	margin-top: 50px;
+}
+
+.main #message ul {
+	list-style: none;
+}
+
+.main #message ul li {
+	margin: 10px 0 10px 0;
+}
+
+.main #message ul li span:first-child {
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	font: bold 16px/30px "微软雅黑";
+	text-align: center;
+	background-color: yellow;
+	margin-right: 10px;
+}
+
+.main #message ul li span:last-child {
+	display: inline-block;
+	height: 30px;
+	font: bold 16px/30px "微软雅黑";
+	text-align: center;
+	background-color: green;
+	padding: 0 10px 0 10px;
+}
+
+.main1 {
+	width: 32%;
+	height: 50px;
+	background-color: green;
+	font: bold 15px/50px "simsun";
+	text-align: center;
+	cursor: pointer;
+	margin: 2px;
+}
+
+@media only screen and (max-width: 750px) {
+	.main1 {
+		margin: 0;
+		font-size: 12px;
+	}
+}
+
+.main1:hover {
+	animation: changeColor 1s;
+}
+
+@keyframes changeColor {
+	from {
+		background-color: green;
+	}
+	to {
+		background-color: yellow;
+	}
+}
+
+
+/*瀑布流开始*/
+
+
+/*.myContainer{
+	padding: 20px;
+}*/
+
+.box {
+	margin-top: 10px;
+	float: left;
+	width: 140px;
+}
+
+.box img {
+	max-width: 100%
+}
+
+
+/*瀑布流结束*/
+
+
+/*联系开始*/
+
+dl {
+	margin-top: 300px;
+}
+
+dl dt {
+	padding: 10px;
+	font: bold 18px "simsun";
+}
+
+dl dd {
+	margin: 10px;
+}
+
+dl dd span {
+	margin-right: 10px;
+}
+
+.form-horizontal {
+	margin-top: 10px;
+}
+
+#line {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+
+
+/*联系结束*/
+
+
+/*右侧结束*/
+
+
+/*相册背景开始*/
+.box{
+	
+	cursor: pointer;
+	position: relative;
+}
+.box .mask{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0;
+	background-color: rgba(0,0,0,.3);
+	transition: all 1;
+}
+.box .mask span{
+	display: none;
+}
+.box:hover .mask span{
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	color: yellow;
+	margin-left: -10px;
+	margin-top: -10px;
+}
+.box:hover .mask{
+	height: 100%;
+}
+/*相册背景结束*/

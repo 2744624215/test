@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title>首页</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<!-- 引入 Bootstrap -->
+		<link href="http://apps.bdimg.com/libs/bootstrap/3.3.0/css/bootstrap.min.css" rel="stylesheet">
+
+		<link href="css/weather.css" rel="stylesheet" type="text/css">
+
+		<link href="css/my.css" rel="stylesheet">
+		<!-- HTML5 Shim 和 Respond.js 用于让 IE8 支持 HTML5元素和媒体查询 -->
+		<!-- 注意： 如果通过 file://  引入 Respond.js 文件，则该文件无法起效果 -->
+		<!--[if lt IE 9]>          
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>        
+      	
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>       
+      <![endif]-->
+	</head>
+
+	<body>
+		<div class="weather rain">
+			<audio autoplay loop>
+				<source src="video/ルルティア - 流光 (Music Box).ogg" type="audio/ogg">
+				<source src="video/ルルティア - 流光 (Music Box).mp3" type="audio/mpeg"> 您的浏览器不支持 audio 元素。
+			</audio>
+			<div class="container">
+				<div class="row">
+					<div class="col-md-3 col-lg-offset-2 col-md-offset-2">
+						<div class="row">
+							<div class="col-md-12" id="logo">
+								<canvas id="logo_title" width="200px" height="200px"></canvas>
+								<div id="logo_img">
+									<img src="img/头像.gif" alt="" width="120" height="120" />
+								</div>
+							</div>
+							<div class="col-md-12" id="nav">
+								<div class="row">
+									<div class="col-md-12 col-sm-4 col-sm-3 col-xs-3" id="indexitem">
+										<div class="row nav_row">
+											<div class="col-md-8 hidden-xs hidden-sm nav_item">首页</div>
+											<div class="col-md-1 hidden-xs hidden-sm nav_item1">|</div>
+											<div class="col-md-2 col-sm-3 col-xs-3 glyphicon glyphicon-home nav_ico"></div>
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-4 col-sm-3 col-xs-3">
+										<div class="row nav_row">
+											<div class="col-md-8 hidden-xs hidden-sm nav_item">技能</div>
+											<div class="col-md-1 hidden-xs hidden-sm nav_item1">|</div>
+											<div class="col-md-2 col-sm-3 col-xs-3 glyphicon glyphicon-bookmark nav_ico"></div>
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-4 col-sm-3 col-xs-3">
+										<div class="row nav_row">
+											<div class="col-md-8 hidden-xs hidden-sm nav_item">相册</div>
+											<div class="col-md-1 hidden-xs hidden-sm nav_item1">|</div>
+											<div class="col-md-2 col-sm-3 col-xs-3 glyphicon glyphicon-eye-open nav_ico"></div>
+										</div>
+									</div>
+									<div class="col-md-12 col-sm-4 col-sm-3 col-xs-3">
+										<div class="row nav_row">
+											<div class="col-md-8 hidden-xs hidden-sm nav_item">联系</div>
+											<div class="col-md-1 hidden-xs hidden-sm nav_item1">|</div>
+											<div class="col-md-2 col-sm-3 col-xs-3 glyphicon glyphicon-envelope nav_ico"></div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="col-md-6">
+						<div class="col-md-12" id="title">
+							<canvas id="htitle" width="400" height="150"></canvas>
+						</div>
+						<div class="col-md-12 main">
+							<h3>Hello，我叫<span id="name">刘斌</span></h3>
+							<h4>一名前端开发工程师</h4>
+							<p>
+								我是17年的大学应届生，大专文凭，学的软件开发，熟悉HTML，css，JavaScript，jQuery，HTML5+css3，canvas，bootstrap响应式布局。会Ajax，正在学习angularJS。
+							</p>
+
+							<div id="message">
+								<h3>个人信息</h3>
+								<ul>
+									<li>
+										<span>地址</span>
+										<span>广州白云区</span>
+									</li>
+									<li>
+										<span>QQ</span>
+										<span>2744624215</span>
+									</li>
+									<li>
+										<span>手机号</span>
+										<span>15074847625</span>
+									</li>
+									<li>
+										<span>到职时间</span>
+										<span>一周之内</span>
+									</li>
+								</ul>
+							</div>
+						</div>
+
+						<div class="col-md-12 main" style="display: none;">
+							<div class="row">
+								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-2 main1">技能</div>
+								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-2 main1">教育</div>
+								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-2 main1">大学情况</div>
+							</div>
+							<div class="bottom1">
+								<h3>技能详解</h3>
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 " id="skillContainer"></div>
+
+								</div>
+								<h3>其它技能</h3>
+								<div class="row">
+									<div class="col-md-12 col-lg-12 col-sm-12 col-xs-12 " id="otherskillContainer"></div>
+
+								</div>
+							</div>
+							<div class="bottom1" style="display: none;">
+								<div class="panel-group" id="accordion">
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+							                <a data-toggle="collapse" data-parent="#accordion" 
+							                href="#collapseOne" style="display:inline-block;width: 100%;">
+							                	教育经历
+							                 <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							                </a>
+							                
+							            </h4>
+										</div>
+										<div id="collapseOne" class="panel-collapse collapse in">
+											<div class="panel-body">
+												<h4>2014年9月 - 2017年7月 湖南信息职业技术学院专科</h4>
+												<p>
+													主修HTML，CSS，JavaScript，JQuery，BootStrap，Asp.Net
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+							                <a data-toggle="collapse" data-parent="#accordion" 
+							                href="#collapseTwo" style="display:inline-block;width: 100%;">
+							                	专业
+							                 <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							            </a>
+							           
+							            </h4>
+										</div>
+										<div id="collapseTwo" class="panel-collapse collapse">
+											<div class="panel-body">
+												<h4>软件开发</h4>
+												<p>
+													偏向.net方向。但也要学前端知识。
+												</p>
+											</div>
+										</div>
+									</div>
+									<div class="panel panel-default">
+										<div class="panel-heading">
+											<h4 class="panel-title">
+							                <a data-toggle="collapse" data-parent="#accordion" 
+							                href="#collapseThree" style="display:inline-block;width: 100%;">
+							                	学校
+							                 <span class="glyphicon glyphicon-chevron-down pull-right"></span>
+							                </a>
+							                
+							            </h4>
+										</div>
+										<div id="collapseThree" class="panel-collapse collapse">
+											<div class="panel-body">
+												<h4>湖南省望城区</h4>
+												<p>湖南省长沙市的一所公办大学。</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="bottom1" style="width: 100%;height: 100%;display: none;">
+								<table class="table table-hover">
+									<caption style="text-align: center;font-size: 18px;">证书</caption>
+									<thead>
+										<tr>
+											<th>证书</th>
+											<th>颁发机构</th>
+											<th>等级</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td>英语三级</td>
+											<td>计算机工程学院</td>
+											<td>三级</td>
+										</tr>
+										<tr>
+											<td>计算机应用工程师</td>
+											<td>计算机工程学院</td>
+											<td>A级</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</div>
+						<div class="col-md-12 main" style="display: none;">
+							<div id="masonry" class="myContainer">
+								<div class="box"><img src="img/1.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/2.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/3.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/4.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/5.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/6.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/7.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/8.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/9.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+								<div class="box"><img src="img/10.jpg">
+									<span class="mask">
+										<span class="glyphicon glyphicon-plus-sign"></span>
+									</span>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-12 main" style="display: none;">
+							<canvas id="line"></canvas>
+							<div class="row">
+								<div class="col-md-5 col-sm-5 col-xs-5">
+									<dl>
+										<dt>联系方式</dt>
+										<dd>
+											<span class="glyphicon glyphicon-map-marker">	
+										</span> 广州白云区
+										</dd>
+										<dd>
+											<span class="glyphicon glyphicon-phone">	
+										</span> 15074847625
+										</dd>
+										<dd>
+											<span class="glyphicon glyphicon-comment">	
+										</span> 2744624215@qq.com
+										</dd>
+									</dl>
+								</div>
+								<div class="col-md-1 col-sm-1 col-xs-1"></div>
+								<div class="col-md-6 col-sm-6 col-xs-6">
+									<form class="form-horizontal">
+										<div class="form-group">
+											<label for="inputPassword3" class="col-sm-2 control-label">Name</label>
+											<div class="col-sm-10">
+												<input type="text" class="form-control" id="inputPassword3" placeholder="Name">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+											<div class="col-sm-10">
+												<input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+											</div>
+										</div>
+										<div class="form-group">
+											<label for="name">Message</label>
+											<textarea class="form-control" rows="3" id="texta" placeholder="Hello"></textarea>
+										</div>
+
+										<div class="form-group">
+											<div class="col-sm-offset-2 col-sm-10">
+												<button type="submit" class="btn btn-default">Send</button>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+			<script src="js/jquery-1.11.1.js"></script>
+			<script src="js/bootstrap.js"></script>
+			<script src="js/jquery.color.js"></script>
+			<script src="js/konva.js"></script>
+			<script src="js/masonry-docs.js"></script>
+			<script src="js/my.js"></script>
+	</body>
+
+</html>
