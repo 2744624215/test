@@ -1,18 +1,11 @@
-/*
- *       ___      ___       ___  __    __   __   __  
- * |  | |__   /\   |  |__| |__  |__)  /  ` /__` /__` 
- * |/\| |___ /~~\  |  |  | |___ |  \ .\__, .__/ .__/ 
- *
- * Minecraft weather effects with pure CSS
- * © Copyright 2014 Moritz Marquardt
- *
- * https://github.com/moqmar/weather.css
- *
- * Licensed under MIT License (http://opensource.org/licenses/MIT)
- */
 
-/* main element */
+body,html{
+	width: 100%;
+	height: 100%;
+}
 .weather {
+	width: 100%;
+	height: 100%;
 	background:url(../img/bg.jpg) no-repeat center center/cover;
     position: relative; overflow: hidden;
 }
