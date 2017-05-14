@@ -318,15 +318,5 @@ $(function() {
 	});
 })
 
-//手机端nav特效开始
-$(function(){
-	$(".nav_row").on("tap",function(){
-		$(this).animate({
-			"backgroundColor":"yellow"
-		},1000).sibling().animate({
-			"backgroundColor":"green"
-		},1000);
-	})
-})
-//手机端nav特效结束
+
 
