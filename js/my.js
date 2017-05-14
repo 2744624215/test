@@ -319,13 +319,6 @@ $(function() {
 })
 
 ///手机端音乐播放问题
-$(function() {
-	document.addEventListener('DOMContentLoaded', function() {
-		function audioAutoPlay() {
-			var audio = document.getElementById('bg-music');
-			audio.play();
-		}
-		audioAutoPlay();
-	});
-
-})
+$('html').on('touchstart',function(){
+	audio.play();
+});
