@@ -308,7 +308,7 @@ $(function() {
 });
 $(function() {
 	var bottom1 = $(".bottom1");
-	var btn = $(".main1");
+	var btn = $(".tab");
 
 	btn.click(function() {
 		bottom1.each(function(index, item) {
