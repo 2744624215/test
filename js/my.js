@@ -319,6 +319,7 @@ $(function() {
 })
 
 ///手机端音乐播放问题
+var audio = document.getElementById('bg-music');
 $('html').on('touchstart',function(){
 	audio.play();
 });
