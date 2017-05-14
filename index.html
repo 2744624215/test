@@ -75,7 +75,7 @@
 							<canvas id="htitle" width="400" height="150"></canvas>
 						</div>
 						<div class="col-md-12 main">
-							<h3>Hello，我叫<span id="name">刘斌</span></h3>
+							<h3 style="padding-top: 20px;">Hello，我叫<span id="name">刘斌</span></h3>
 							<h4>一名前端开发工程师</h4>
 							<p>
 								我是17年的大学应届生，大专文凭，学的软件开发，熟悉HTML，css，JavaScript，jQuery，HTML5+css3，canvas，bootstrap响应式布局。会Ajax，正在学习angularJS。
@@ -106,9 +106,21 @@
 
 						<div class="col-md-12 main" style="display: none;">
 							<div class="row">
-								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-2 main1">技能</div>
-								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-2 main1">教育</div>
-								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-2 main1">大学情况</div>
+								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 tab">
+									<span class="main1">
+										技能
+									</span>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 tab">
+									<span class="main1">
+										教育
+									</span>
+								</div>
+								<div class="col-md-4 col-lg-4 col-sm-4 col-xs-4 tab">
+									<span class="main1">
+										大学情况
+									</span>
+								</div>
 							</div>
 							<div class="bottom1">
 								<h3>技能详解</h3>
@@ -266,25 +278,7 @@
 						<div class="col-md-12 main" style="display: none;">
 							<canvas id="line"></canvas>
 							<div class="row">
-								<div class="col-md-5 col-sm-5 col-xs-5">
-									<dl>
-										<dt>联系方式</dt>
-										<dd>
-											<span class="glyphicon glyphicon-map-marker">	
-										</span> 广州白云区
-										</dd>
-										<dd>
-											<span class="glyphicon glyphicon-phone">	
-										</span> 15074847625
-										</dd>
-										<dd>
-											<span class="glyphicon glyphicon-comment">	
-										</span> 2744624215@qq.com
-										</dd>
-									</dl>
-								</div>
-								<div class="col-md-1 col-sm-1 col-xs-1"></div>
-								<div class="col-md-6 col-sm-6 col-xs-6">
+								<div class="col-md-6 col-sm-6 col-xs-6 col-lg-offset-6 col-md-offset-6 col-sm-offset-6 col-xs-offset-6">
 									<form class="form-horizontal">
 										<div class="form-group">
 											<label for="inputPassword3" class="col-sm-2 control-label">Name</label>
@@ -299,16 +293,55 @@
 											</div>
 										</div>
 										<div class="form-group">
-											<label for="name">Message</label>
-											<textarea class="form-control" rows="3" id="texta" placeholder="Hello"></textarea>
+											<label for="inputMessage" class="col-sm-2">Info</label>
+											<div class="col-sm-10">
+												<textarea id="inputMessage" class="form-control" placeholder="Hello" rows="3" style="resize: none;"></textarea>
+											</div>
 										</div>
-
 										<div class="form-group">
 											<div class="col-sm-offset-2 col-sm-10">
 												<button type="submit" class="btn btn-default">Send</button>
 											</div>
 										</div>
 									</form>
+								</div>
+							</div>
+							<div class="row">
+								<div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+									<div class="row">
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+											<h3>联系方式</h3>
+										</div>
+										<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12" >
+											<div class="row" style="padding: 5px;">
+												<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+													<span class="glyphicon glyphicon-map-marker">	
+												</span>
+												</div>
+												<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+													<span>广州白云区</span>
+												</div>
+											</div>
+											<div class="row" style="padding: 5px;">
+												<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+													<span class="glyphicon glyphicon-phone">	
+												</span>
+												</div>
+												<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+													<span>15074847625</span>
+												</div>
+											</div>
+											<div class="row" style="padding: 5px;">
+												<div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+													<span class="glyphicon glyphicon-comment">	
+												</span>
+												</div>
+												<div class="col-lg-8 col-md-8 col-sm-8 col-xs-8">
+													<span>2744624215@qq.com</span>
+												</div>
+											</div>
+										</div>
+									</div>
 								</div>
 							</div>
 						</div>
