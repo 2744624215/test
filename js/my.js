@@ -36,7 +36,7 @@ $(function() {
 $(function() {
 	//nav开始
 	var dvs = $(".nav_row");
-	var titleW=$("#title").width();
+	var titleW = $("#title").width();
 	var canvas1 = document.querySelector("#htitle");
 	var ctx1 = canvas1.getContext("2d");
 	ctx1.strokeRect(0, 0, 200, 100);
@@ -75,7 +75,7 @@ $(function() {
 		})
 	});
 	//nav结束
-	
+
 })
 $(function() {
 	var main = $(".main");
@@ -316,4 +316,16 @@ $(function() {
 		})
 		bottom1[$(this).index()].style.display = "block";
 	});
+})
+
+///手机端音乐播放问题
+$(function() {
+	document.addEventListener('DOMContentLoaded', function() {
+		function audioAutoPlay() {
+			var audio = document.getElementById('bg-music');
+			audio.play();
+		}
+		audioAutoPlay();
+	});
+
 })
